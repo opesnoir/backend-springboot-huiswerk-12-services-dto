@@ -7,6 +7,7 @@ public class Television {
 
     //  Een entiteit moet een primary key bevatten(id)
     @Id
+    // GeneratedValue betekend dat je deze waarde niet zelf hoeft in te vullen, dit doet Spring Boot voor jou bij het opslaan in de database.
     @GeneratedValue
     Long id;
 
@@ -28,7 +29,12 @@ public class Television {
     private Integer originalStock;
     private Integer sold;
 
-//    constructors hoeven niet per se aangemaakt te worden
+//    Constructors hoeven niet per se aangemaakt te worden. Java maakt automatisch een default constructor (achter de schermen).
+//    Let er op dat wanneer je een eigen constructor maakt, bijvoorbeeld een constructor met alle gevraagde variabelen,
+//    dan verdwijnt de automatische default constructor. Je moet dan zelf ook een default constructor maken.
+//    Je maakt dus nooit 1 constructor. Het is 0 of 2, 3, 4, etc.
+
+
 //    // Een default constructor
 //    public Television() {}
 //
