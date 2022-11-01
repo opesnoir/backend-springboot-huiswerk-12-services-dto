@@ -4,7 +4,6 @@ package nl.novi.techiteasy1121.controllers;
 import nl.novi.techiteasy1121.exceptions.RecordNotFoundException;
 import nl.novi.techiteasy1121.models.Television;
 import nl.novi.techiteasy1121.repositories.TelevisionRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -131,7 +130,7 @@ public class TelevisionController {
             television1.setType(newTelevision.getType());
             television1.setVoiceControl(newTelevision.getVoiceControl());
             television1.setWifi(newTelevision.getWifi());
-            // Sla de gewijzigde waarden op in de database onder dezelfde id.
+            // Sla de gewijzigde waarden op in de database onder dezelfde id. Dit moet je niet vergeten.
             Television returnTelevision = televisionRepository.save(television1);
             // Return de nieuwe versie van deze tv en een 200 code
             return ResponseEntity.ok().body(returnTelevision);
