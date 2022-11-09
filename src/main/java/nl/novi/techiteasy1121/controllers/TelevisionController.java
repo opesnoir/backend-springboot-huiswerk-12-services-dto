@@ -77,7 +77,7 @@ public class TelevisionController {
 
     // We geven hier een television mee in de parameter. Zorg dat je JSON object exact overeenkomt met het Television object.
     @PostMapping("/televisions")
-    public ResponseEntity<Object> addTelevision(@RequestBody Television television) {
+    public ResponseEntity<Television> addTelevision(@RequestBody Television television) {
 
         // Sla de nieuwe tv in de database op met de save-methode van de repository
         Television returnTelevision = televisionRepository.save(television);
@@ -99,7 +99,7 @@ public class TelevisionController {
     }
 
     @PutMapping("/televisions/{id}")
-    public ResponseEntity<Object> updateTelevision(@PathVariable Long id, @RequestBody Television newTelevision) {
+    public ResponseEntity<Television> updateTelevision(@PathVariable Long id, @RequestBody Television newTelevision) {
 
         // Haal de aan te passen tv uit de database met het gegeven id
         Optional<Television> television = televisionRepository.findById(id);
