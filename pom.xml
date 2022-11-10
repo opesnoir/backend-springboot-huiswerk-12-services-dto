@@ -14,14 +14,14 @@
     <name>TechItEasy-11-21</name>
     <description>TechItEasy-11-21</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+<!--        Deze dependency is een handige tool die er voor zorgt dat je code automatisch herlaadt nadat je een wijziging hebt gedaan.-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -33,15 +33,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+<!--        Deze dependency hebben we nodig om Repositories te kunnen gebruiken.-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+<!--        We hebben één van onderstaande dependencies nodig, maar dit zijn uiteraard niet de enige keuzes.-->
+<!--        Als je PostgreSQL gebruikt, dan neem je deze dependency-->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
+<!--        Als je MySQL gebruikt, dan neem je deze dependency-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
