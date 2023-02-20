@@ -10,7 +10,7 @@
 
 - Aan alle randvoorwaarden moet zijn voldaan
 
-- De repository moet goed aan de service gekoppeld zijn met `@Autowired` (of via een constructor, dan is `@Autowired` alleen verplicht als je meerdere constructors hebt)
+- De repository moet goed aan de service gekoppeld zijn met constructor injection (of via `@Autowired`)
 
 - De POM.xml bevat dependencies voor _Spring Web_, _Spring Data Jpa_ en _PostgreSQL Driver_
 
