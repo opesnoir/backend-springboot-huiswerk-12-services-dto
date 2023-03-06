@@ -22,7 +22,9 @@
      └── resources
 ```
 _Let op:_
+
 _"nl.novi.techiteasy" mag ook iets anders zijn, zoals "com.jounaam.applicatienaam"_
+
 _De volgorde van de mappen, controllers, models, repositories en exceptions is niet belangrijk. 
 
 ## Functionaliteit
