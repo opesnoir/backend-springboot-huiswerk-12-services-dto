@@ -9,4 +9,6 @@ import java.util.List;
 // mee te geven en vervolgens het type van het @Id-geannoteerde veld in die entiteit.
 public interface TelevisionRepository extends JpaRepository<Television, Long> {
     List<Television> findAllTelevisionsByBrandEqualsIgnoreCase(String brand);
+    List<Television> findTelevisionByBrandAndNameEqualsIgnoreCase(String brand, String name);
+
 }
